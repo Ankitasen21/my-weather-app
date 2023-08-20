@@ -62,7 +62,9 @@
 @media (max-width: 200px) {
   /* Styles for smaller screens */
   .weather form input{
-
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
   }
   .open .closed{
     margin: 2rem;
