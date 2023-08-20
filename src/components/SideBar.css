@@ -1,0 +1,43 @@
+/* Sidebar.css */
+.sidebar_closed {
+  padding: 2rem;
+  width: 2rem;
+  height: 100vh;
+  background-color: #354f52;
+  color: rgb(66, 66, 66);
+  text-align: center;
+}
+
+.sidebar-open {
+  padding: 2rem;
+  width: 15rem;
+  height: 100vh;
+  background-color: #354f52;
+  font-size: larger;
+  align-items: center;
+  text-align: center;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.toggleButton {
+  background-color: transparent;
+  color: #84a98c;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+li:active {
+  color: rgba(255, 255, 255, 0.151);
+}

@@ -2,18 +2,16 @@
   margin-top: 20px;
   display: flex;
   flex-flow: column nowrap;
+  color: rgba(241, 241, 241, 0.788);
 }
 
 .displayweather .maincard {
   width: fit-content;
   position: relative;
-  align-items: center;
-  text-align: center;
-  vertical-align: middle;
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.37);
+  background-color: #d4e6b5;
   border: transparent;
-  padding: 5rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .displayweather .maincard .cardtitle {
@@ -21,17 +19,18 @@
   top: 2rem;
   left: 2rem;
   font-size: 1.5rem;
+  color: #877B66;
 }
 
 .displayweather .maincard .cardsubtitle {
-  position: absolute;
-  left: 2rem;
-  color: rgba(245, 245, 245, 0.658);
-  margin-top: -8px;
+  position: relative;
+  top:1rem;
+  color: #695F4F;
 }
 
 .displayweather h1 {
   font-size: 5rem;
+  color: #73903C;
 }
 
 .displayweather .weather-icon {
@@ -41,6 +40,7 @@
 
 .desc{
   font-size: 1.5rem;
+  color: rgba(34, 32, 32, 0.788);
 }
 
 .displayweather .weather-description {
@@ -49,22 +49,20 @@
   font-size: 1.4rem;
 }
 .displayweather .weatherdetails {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-right: 3rem;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  grid-gap: 20px;
+  grid-gap: 2rem;
+  color: rgba(20, 18, 18, 0.788);
 }
 .displayweather .weatherdetails .section1 {
   justify-self: right;
-  width: 300px;
+  width: inherit;
 }
 h4 {
   text-align: left;
-  margin-right: 30px;
   font-size: 1.2rem;
-  color: rgba(241, 241, 241, 0.322);
+  color: #877B66;
 }
 
 .displayweather .weatherdetails span {

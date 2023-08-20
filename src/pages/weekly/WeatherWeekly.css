@@ -1,0 +1,31 @@
+.maincard{
+    margin: 2rem auto;
+    border-radius: 20px;
+    background-color: #d3e6b3d7;
+    border: transparent;
+    padding: 3rem 2rem;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.1rem;
+}
+
+.buttons button{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    padding: 1rem auto;
+    margin-top: 2rem;
+    font-size: xx-large;
+    color: #53452e;
+}
+.buttons button:disabled{
+    visibility: inherit;
+    color: #877B66;
+}

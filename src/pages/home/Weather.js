@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import DisplayWeather from "./DisplayWeather";
+import DisplayWeather from "./helper/DisplayWeather";
+import ErrorBoundary from "../../components/ErrorBoundary"
 import "./weather.css";
 
 function Weather() {
@@ -13,7 +14,7 @@ function Weather() {
   async function weatherData(e) {
     e.preventDefault();
     if (form.city === "") {
-      alert("enter valid data");
+      <ErrorBoundary />
     } else {
       const data = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${form.city}&APPID=${APIKEY}`
@@ -36,7 +37,7 @@ function Weather() {
   return (
     <div className="weather">
       <span className="title">Weather App</span>
-      <br />
+      <h3 className="subtitle"> Enter the name of your city to get the Weather now! </h3>
       <form>
         <div className="field">
           <input
@@ -51,10 +52,10 @@ function Weather() {
         </div>
       </form>
       {weather.data !== undefined ? (
-        <div>
+        <div className="display">
           <DisplayWeather data={weather.data} />
         </div>
-      ) : null}
+      ) : <ErrorBoundary />}
     </div>
   );
 }

@@ -3,18 +3,26 @@
   font-weight: bold;
 }
 
+.subtitle{
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
 .weather form input {
   font-size: 1rem;
   margin-left: 2rem;
   background-color: transparent;
   border: transparent;
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: white
+}
+.form{
+  margin-top: 2rem;
 }
 
 .field {
-  background-color: rgba(211, 211, 211, 0.226);
-  margin: 2rem auto;
+  background-color: rgba(22, 18, 18, 0.7);
+  margin:1rem auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 25px;
@@ -32,10 +40,20 @@
   color: white;
 }
 .weather .getweather:hover{
-  color: rgb(37, 37, 71);
-  font-weight: bold;
+  color: rgb(204, 204, 204);
 }
 
 .weather form input:focus{
   outline: none;
+}
+
+.open, .closed{
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.open .display{
+  flex-wrap: wrap;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }

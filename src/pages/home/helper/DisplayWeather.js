@@ -1,11 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./displayweather.css";
+
 function DisplayWeather(props) {
+  const [time, setTime] = useState(null);
   const { data } = props;
   const iconurl =
     "http://openweathermap.org/img/wn/" +
     `${data.cod !== 404 ? data.weather[0].icon : null}` +
     ".png";
+
+  async function fetchTimeZoneByCity(city) {
+    const apiKey = "7192bb96a5ff4d7898f42030231908";
+    const apiUrl = `https://api.weatherapi.com/v1/timezone.json?key=${apiKey}&q=${encodeURIComponent(
+      city
+    )}`;
+
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching time zone data:", error);
+      return null;
+    }
+  }
+
+  useEffect(() => {
+    async function getLocalTime(inputCity) {
+      //const inputCity = "New York"; // Replace with the actual city
+      const timeZoneData = await fetchTimeZoneByCity(inputCity);
+      if (timeZoneData) {
+        console.log("Time zone:", timeZoneData.timezone);
+        console.log("Current time:", new Date(timeZoneData.location.localtime));
+        const d = new Date(timeZoneData.location.localtime);
+        setTime(d.toString());
+      }
+    }
+    getLocalTime(data.name);
+  }, [data.name]);
 
   return (
     <div className="displayweather">
@@ -16,7 +48,7 @@ function DisplayWeather(props) {
               {data.name} , {data.sys.country}. Weather
             </span>
             <span className="cardsubtitle">
-              Last Updated: {new Date().toLocaleTimeString()}
+              Last Updated: {time}
             </span>
             <h1>
               {Math.floor(data.main.temp - 273.15)}
