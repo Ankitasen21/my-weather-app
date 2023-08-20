@@ -1,5 +1,5 @@
 .displayweather {
-  margin-top: 20px;
+  margin-top: 1.2rem;
   display: flex;
   flex-flow: column nowrap;
   color: rgba(241, 241, 241, 0.788);
@@ -67,4 +67,8 @@ h4 {
 
 .displayweather .weatherdetails span {
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  
 }

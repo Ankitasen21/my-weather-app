@@ -41,3 +41,13 @@ li {
 li:active {
   color: rgba(255, 255, 255, 0.151);
 }
+
+@media (max-width: 768px) {
+  /* Styles for smaller screens */
+  .sidebar_closed{
+    width: 1rem;
+  }
+  .sidebar-open{
+    width: fit-content;
+  }
+}
