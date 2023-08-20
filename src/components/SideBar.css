@@ -42,10 +42,10 @@ li:active {
   color: rgba(255, 255, 255, 0.151);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 200px) {
   /* Styles for smaller screens */
   .sidebar_closed{
-    width: 1rem;
+    width: fit-content;
   }
   .sidebar-open{
     width: fit-content;
